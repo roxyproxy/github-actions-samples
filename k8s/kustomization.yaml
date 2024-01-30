@@ -8,4 +8,4 @@ namespace: hello-gitops
 images:
 - name: hello-gitops
   newName: roxyproxy/hello-gitops
-  newTag: 35ed2f6165dc7b71a0b190a3a358e4747d643266
+  newTag: 5943f1a578ed461f9b4828ac980a9c7e69a0aaba
