@@ -4,8 +4,8 @@ resources:
 - deployment.yaml
 - service.yaml
 - ingress.yaml
-namespace: hello-gitops
+namespace: python-app-blue
 images:
 - name: hello-gitops
   newName: roxyproxy/hello-gitops
-  newTag: df34d1549ca6973e7e22601b6032fc9df97bdf54
+  newTag: 8df5c1b3eec2a300ad9b88b5060a76a4fbf17ba8
