@@ -160,7 +160,13 @@ jobs:
         git config --local user.name "GitHub Action"
         git commit -am "Bump docker tag"
         
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }} 
+
     - name: Push changes
-      uses: ad-m/github-push-action@master
+      uses: actions-go/push@master
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }} 
+        commit-message: '[Auto] update pre-puilt dist packages'
+        remote: origin
