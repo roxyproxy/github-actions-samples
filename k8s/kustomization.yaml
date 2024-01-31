@@ -8,4 +8,4 @@ namespace: python-app-green
 images:
 - name: hello-gitops
   newName: roxyproxy/hello-gitops
-  newTag: ecc1f53407b2ce444901b924c94317177de6c8d3
+  newTag: 21f9787aa1068e708a8e21eca460e868abeff54e
