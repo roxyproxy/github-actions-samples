@@ -145,13 +145,13 @@ jobs:
     #    kubectl apply -k k8s/
 
     # REMOVE OLD DEPLOYMENT!!
-    # - name: Remove old namespace
-    #   run: |
-    #     namespacePresentOld=`kubectl get ns | grep ${{ env.OLD_NAMESPACE }} | wc -l`
-    #     if [ $namespacePresentOld -eq 1 ]
-    #     then
-    #       kubectl delete ns ${{ env.OLD_NAMESPACE }} --wait=true
-    #     fi
+    - name: Remove old namespace
+      run: |
+        namespacePresentOld=`kubectl get ns | grep ${{ env.OLD_NAMESPACE }} | wc -l`
+        if [ $namespacePresentOld -eq 1 ]
+        then
+          kubectl delete ns ${{ env.OLD_NAMESPACE }} --wait=true
+        fi
  
     - name: Commit files
       run: |
