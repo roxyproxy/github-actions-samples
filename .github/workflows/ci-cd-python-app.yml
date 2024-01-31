@@ -83,10 +83,7 @@ jobs:
 
     steps:
     - name: Check out code
-    - uses: actions/checkout@v4
-      with:
-        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
-        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+      uses: actions/checkout@v2
 
     - name: Setup Kustomize
       uses: imranismail/setup-kustomize@v1
@@ -155,10 +152,6 @@ jobs:
         then
           kubectl delete ns ${{ env.OLD_NAMESPACE }} --wait=true
         fi
-    - uses: actions/checkout@v4
-      with:
-        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
-        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
  
     - name: Commit files
       run: |
